@@ -1,0 +1,16 @@
+<div class="title-and-time">
+  <h2>Match Game</h2>
+  <h2>Time: &nbsp;&nbsp;<span id="countDown"></span></h2>
+</div>
+<div class="wrapper">
+    <ul class="cards">
+        <li *ngFor="let image of files; let i=index" class="card" (click)="flipCard(image.name, i)" >
+            <div class="view front-view">
+              <span class="material-icon">?</span>
+            </div>
+            <div class="view back-view">
+              <img src="../assets/images/{{image.name}}" alt="card-img">
+            </div>
+        </li>
+    </ul>
+</div>
